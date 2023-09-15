@@ -1,34 +1,43 @@
+/* selector > selector hijo --> el > lo usamos solo cuando es un hijo directo */
+
+/* --------------------------------- Section -------------------------------- */
 .features {
   margin-top: 4rem;
 }
 
+/* ------------------------------- DIV WRAPPER ------------------------------ */
 .features-wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+/* ---------------------------- DIV de c/u de las Cards --------------------- */
 .feature {
   text-align: center;
   padding: 0 1rem;
 }
 
-.feature > p {
-  padding: 1rem 0;
-}
-
-.feature > img {
-  width: 100%;
-  border-radius: 20px;
-  max-width: 450px;
-  aspect-ratio: 2/3;
-  object-fit: cover;
-}
-
+/* --------------------------------- Título --------------------------------- */
 .feature-title {
   font-size: 2rem;
 }
 
+/* ------------------------------- Descripción------------------------------ */
+.feature > p {
+  padding: 1rem 0;
+}
+
+/* --------------------------------- Imagen --------------------------------- */
+.feature > img {
+  width: 100%;
+  border-radius: 20px;
+  max-width: 450px;
+  aspect-ratio: 2/3; /* el ancho ocupa 2 unidades mientras que el alto 3 unidades*/
+  object-fit: cover; /* para que no se distorcione la imagen y la imagen "cubra" el espacio requerido --> la imagen se adapta*/
+}
+
+/* ------------------------------ Media Queries ----------------------------- */
 @media (min-width: 768px) {
   .features-wrapper {
     display: grid;

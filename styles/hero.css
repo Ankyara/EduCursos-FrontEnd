@@ -1,45 +1,48 @@
 .hero {
-  position: relative;
-  padding-bottom: 4rem;
+  position: relative; /* para que los "hijos" se puedan posicionar como absolutos*/
+  padding-bottom: 4rem; /* 1rem = 16px*/
 }
 
 .plate-wrapper {
-  position: relative;
+  position: relative; /* padre posición relative*/
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centrar foto de plato horizontalmente */
+  align-items: center; /* centrar foto de plato verticalmente */
 }
 
 .plate {
   width: 120px;
   height: auto;
-  padding: 1rem 0;
+  padding: 1rem 0; /* 1rem = 16px*/
 }
 
+
+/* ----------------------- Foto Plato Centrada + fondo ---------------------- */
 .plate-circle {
   background-color: var(--primary-color);
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: absolute; /* importante poner absolute --> posicionamiento*/
   top: 0;
-  z-index: -1;
-  border-radius: 0 0 50% 50%;
-  transform: translate(0, -45%);
+  z-index: -1; /* para que se coloque "en el fondo" */ 
+  border-radius: 0 0 50% 50%; /* forma circular */ 
+  transform: translate(0, -45%); /* el fondo circular se posicione + arriba */
 }
 
+/* ----------------------------- Titulo  + Botón ---------------------------- */
 .hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.5rem; /* 24px --> 16px = 1rem */
   width: 100%;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3rem; /* 1rem = 16px*/
   text-align: center;
-  max-width: 400px;
+  max-width: 400px; /* evitar que el texto se extienda */
 }
 
 .hero-button {
@@ -47,19 +50,30 @@
   color: white;
   padding: 0.75em 1em;
   border-radius: 20px;
-  width: fit-content;
+  width: fit-content; /* se ajuste al contenido --> el botón se extiende solo para permitir que el contenido (texto) encaje */
   border: 1px solid var(--black-color);
   transition: all;
   transition-duration: 300ms;
 }
 
+.hero-button:hover {
+  cursor: pointer; /* cursor modo "manito" */
+  background: var(--primary-color);
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+  scale: 1.025;
+}
+
+
+
+/* --------------------- Elementos flotantes - imagenes --------------------- */
 .left-floating {
   width: 150px;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
-  transform: rotate(15deg) translate(-10%, 20%);
+  z-index: -1; /* para que la imagen quede de fondo*/
+  transform: rotate(15deg) translate(-10%, 20%); /* para rotar la imagen*/
 }
 
 .right-floating {
@@ -67,19 +81,13 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: -1;
-  transform: rotate(-15deg) translate(10%, 30%);
+  z-index: -1; /* para que la imagen quede de fondo*/
+  transform: rotate(-15deg) translate(10%, 30%); /* para rotar la imagen*/
 }
 
-.logo-bar {
+/* ----------------------------- Palo de Amasar ----------------------------- */
+.logo-restaurant {
   position: absolute;
   top: 0;
 }
 
-.hero-button:hover {
-  cursor: pointer;
-  background: var(--primary-color);
-  color: var(--black-color);
-  border: 1px solid var(--black-color);
-  scale: 1.025;
-}

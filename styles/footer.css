@@ -4,13 +4,14 @@
   align-items: center;
   text-align: center;
   font-weight: 500;
-  margin-top: 3rem;
+  margin-top: 3rem; /* 48px */
   padding-bottom: 1em;
   gap: 2rem;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* para que el círculo nio la foto "sobresalgan" del espacio del footer*/
 }
 
+/* ------------------------ Lista desordenada - links ----------------------- */
 .links a {
   text-decoration: none;
   color: black;
@@ -23,6 +24,7 @@
   gap: 0.5rem;
 }
 
+/* -------------------------------- Copuright ------------------------------- */
 .copyright {
   font-family: Montserrat;
 }
@@ -30,25 +32,26 @@
 .copyright p {
   padding: 0.25rem 0;
 }
-
+/* -------------------------- Círculo fondo cremita ------------------------- */
 .footer-circle {
   width: 120%;
   height: 120%;
-  position: absolute;
-  bottom: -120px;
-  z-index: -2;
+  position: absolute; /* para posicionar el circulo cremita */
+  bottom: -120px; /* para posicionar el circulo cremita */
+  z-index: -2; /* para que el círculo se ubique detrás de la imagen del queso*/
   background-color: var(--primary-color);
-  border-radius: 50% 50% 0 0;
+  border-radius: 50% 50% 0 0; /* para redondear */
 }
 
+/* ------------------------- Imagen chesse flotando ------------------------- */
 .footer-floating {
   position: absolute;
   width: 140px;
   height: auto;
-  bottom: 0;
-  left: 0;
-  transform: translate(-30%, 30%);
-  z-index: -1;
+  bottom: 0; /* para posicionar la imagen a la abajo */
+  left: 0; /* para posicionar la imagen a la izquierda */
+  transform: translate(-30%, 30%); /* para mover la imagen mas a la izquierda...saliendo del footer  - overflow hidden! */
+  z-index: -1; /* para ubicar la imagen al fondo pero por encima del fondo circular*/ 
 }
 
 .brand-copy {
